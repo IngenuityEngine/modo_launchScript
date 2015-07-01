@@ -1,6 +1,6 @@
 # Launch Script for MODO
 
-Launch Script is an improved version of MODO's default script.run.
+Launch Script is an improved version of MODO's default script.run.  It's based on the way the built in script editor works and runs code in the same manner.
 
 ## Installation
 1. Hit Download ZIP on the right
