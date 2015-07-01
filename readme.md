@@ -18,8 +18,8 @@ Launch Script is an improved version of MODO's default script.run.  It's based o
 	- Scripts executed with launchScript can bless commands, views, etc at runtime
 	- Everything can still only be blessed once but at least you don't have to shove everything in an lxserv folder :)
 - Proper Python magic variables
-	- __file__ is set to the filepath of the script you're running
-	- __name__ is set to '__main__' so tools using that convention will work
+	- ```__file__``` is set to the filepath of the script you're running
+	- ```__name__``` is set to ```'__main__'``` so tools using that convention will work
 
 ## Drawbacks
 - You have to restart MODO when updating libraries as they're only loaded once.  You can use reload() but that's a bad habit, besides MODO takes like 6 seconds to start
