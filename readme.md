@@ -20,6 +20,8 @@ Launch Script is an improved version of MODO's default script.run.  It's based o
 - Proper Python magic variables
 	- ```__file__``` is set to the filepath of the script you're running
 	- ```__name__``` is set to ```'__main__'``` so tools using that convention will work
+- Runs everything as Python, no need to put #python at the top of your files
+- Sets an empty sys.argv.  MODO doesn't set this by default which causes errors in certain libraries
 
 ## Drawbacks
 - You have to restart MODO when updating libraries as they're only loaded once.  You can use reload() but that's a bad habit, besides MODO takes like 6 seconds to start

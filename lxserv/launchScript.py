@@ -56,6 +56,7 @@ class LaunchScript(lxu.command.BasicCommand):
 				context = globals()
 				context['__file__'] = scriptPath
 				context['__name__'] = '__main__'
+				sys.argv = [scriptPath]
 				exec(compiled, context)
 			except Exception:
 				# remove refernces to this command and the calling scripteditor host
