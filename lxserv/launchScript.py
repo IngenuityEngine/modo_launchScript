@@ -1,5 +1,6 @@
 # python
 
+import os
 import sys
 
 from StringIO import StringIO
@@ -57,6 +58,10 @@ class LaunchScript(lxu.command.BasicCommand):
 				context['__file__'] = scriptPath
 				context['__name__'] = '__main__'
 				sys.argv = [scriptPath]
+
+				# append the dirname to path so we can require files like normal
+				sys.path.append(os.path.dirname(scriptPath))
+
 				exec(compiled, context)
 			except Exception:
 				# remove refernces to this command and the calling scripteditor host
